@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chawla Sweets - Premium Indian Sweets Since 1975</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========== ENHANCED CSS VARIABLES ========== */
+        :root {
+            --saffron: #FF9933;
+            --deep-orange: #FF6600;
+            --royal-red: #CC0000;
+            --golden: #FFD700;
+            --cream: #FFF8DC;
+            --ivory: #FFFFF0;
+            --warm-brown: #8B4513;
+            --dark-brown: #654321;
+            --light-pink: #FFE4E1;
+            --peach: #FFCCCB;
+            --white: #FFFFFF;
+            --text-dark: #2C1810;
+            --text-light: #8B7355;
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.2);
+            --gradient-saffron: linear-gradient(135deg, #FF9933, #FFD700);
+            --gradient-royal: linear-gradient(135deg, #CC0000, #FF6600);
+            --gradient-warm: linear-gradient(135deg, #FFF8DC, #FFE4E1);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 20px;
+        }
+
+        /* ========== RESET & ENHANCED BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--ivory);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========== ENHANCED TYPOGRAPHY ========== */
+        h1, h2, h3 {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+            color: var(--dark-brown);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: var(--gradient-saffron);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        .decorative-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.8rem;
+            color: var(--saffron);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* ========== ENHANCED HEADER & NAVIGATION ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 248, 220, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-medium);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 3px solid var(--saffron);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-saffron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-light);
+        }
+
+        .logo-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: var(--gradient-royal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: var(--transition);
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-saffron);
+            border-radius: 30px;
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            opacity: 1;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Enhanced Mobile Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            padding: 15px;
+            border-radius: 10px;
+            background: var(--gradient-saffron);
+            transition: var(--transition);
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 4px;
+            background: var(--white);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* ========== STUNNING HERO SECTION ========== */
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(255, 215, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=1920&h=1080&fit=crop') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.3) 0%, transparent 50%), 
+                              radial-gradient(circle at 75% 75%, rgba(255, 153, 51, 0.3) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 4rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .hero h1 {
+            font-size: 5.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-royal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            from { filter: drop-shadow(0 0 10px rgba(255, 153, 51, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(255, 153, 51, 0.8)); }
+        }
+
+        .hero-subtitle {
+            font-size: 2.2rem;
+            color: var(--golden);
+            margin-bottom: 1.5rem;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        /* ========== ENHANCED BUTTONS ========== */
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--gradient-saffron);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-medium);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: var(--transition);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: var(--gradient-royal);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--dark-brown);
+            border: 3px solid var(--dark-brown);
+            background: var(--ivory);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gradient-royal);
+            color: var(--white);
+            border-color: transparent;
+        }
+
+        /* ========== ENHANCED SECTIONS ========== */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: var(--gradient-warm);
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 20%, rgba(255, 153, 51, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* ========== STUNNING MENU SECTION ========== */
+        .menu-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 15px 30px;
+            background: var(--ivory);
+            color: var(--text-dark);
+            border: 3px solid var(--saffron);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: var(--shadow-light);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--gradient-saffron);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .menu-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient-saffron);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .menu-item:hover::before {
+            opacity: 0.1;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .menu-item-image {
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+        }
+
+        .menu-item-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 0%, rgba(255, 153, 51, 0.3) 100%);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            opacity: 1 !important; /* Fixed image visibility */
+            display: block;
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.15);
+            filter: brightness(1.2);
+        }
+
+        .menu-content {
+            padding: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-item h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-royal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .menu-item p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .menu-price {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-saffron);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rupee-symbol {
+            font-size: 1.8rem;
+            color: var(--saffron);
+        }
+
+        /* Special Indian Sweet Styling */
+        .special-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gradient-royal);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 3;
+            box-shadow: var(--shadow-light);
+        }
+
+        /* ========== ENHANCED ABOUT SECTION ========== */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: var(--gradient-royal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-text p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            background: var(--gradient-saffron);
+            border-radius: var(--border-radius);
+            z-index: -1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+            transition: var(--transition);
+            opacity: 1 !important; /* Fixed image visibility */
+            display: block;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Heritage Stats */
+        .heritage-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-saffron);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* ========== ENHANCED TESTIMONIALS ========== */
+        .testimonials-slider {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+
+        .testimonial {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+            border: 3px solid var(--saffron);
+        }
+
+        .testimonial.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-saffron);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .testimonial-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 1.2rem;
+            background: var(--gradient-royal);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stars {
+            color: var(--golden);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--light-pink);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid var(--saffron);
+        }
+
+        .testimonial-dot.active {
+            background: var(--saffron);
+            transform: scale(1.2);
+        }
+
+        /* ========== ENHANCED CONTACT SECTION ========== */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+            border-top: 5px solid var(--saffron);
+        }
+
+        .contact-form h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--dark-brown);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 3px solid var(--light-pink);
+            border-radius: 15px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            font-family: inherit;
+            background: var(--ivory);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--saffron);
+            box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.2);
+        }
+
+        .contact-info {
+            background: var(--gradient-warm);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .contact-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--saffron);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            border-radius: 50%;
+            box-shadow: var(--shadow-light);
+        }
+
+        .map-container {
+            margin-top: 3rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            border: 3px solid var(--saffron);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-saffron);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .social-icon:hover {
+            background: var(--gradient-royal);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* ========== ENHANCED FOOTER ========== */
+        .footer {
+            background: var(--gradient-royal);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-saffron);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-section h3 {
+            color: var(--golden);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            display: block;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--golden);
+            transform: translateX(5px);
+        }
+
+        /* FIXED: Footer Social Icons Perfect Alignment */
+        .footer .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer .social-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer .social-icon:hover {
+            background: var(--golden);
+            color: var(--dark-brown);
+            border-color: var(--golden);
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .footer-bottom {
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+
+        /* ========== ENHANCED ANIMATIONS ========== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .fade-in.visible {
+            animation-play-state: running;
+        }
+
+        .bounce-in {
+            animation: bounce 2s ease infinite;
+        }
+
+        /* ========== ENHANCED RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 85px;
+                flex-direction: column;
+                background: var(--ivory);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow-heavy);
+                padding: 3rem 0;
+                border-top: 3px solid var(--saffron);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1.5rem 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-image {
+                order: -1;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .heritage-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content {
+                margin: 0 1rem;
+                padding: 2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            /* Mobile Footer Social Icons */
+            .footer .social-icons {
+                justify-content: center;
+            }
+
+            .footer-content {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+
+            .heritage-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-filters {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer .social-icons {
+                gap: 0.8rem;
+            }
+
+            .footer .social-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        /* ========== SPECIAL EFFECTS ========== */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 153, 51, 0.1);
+            border-radius: 50%;
+            animation: floatShape 6s ease-in-out infinite;
+        }
+
+        @keyframes floatShape {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        /* Scroll Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--gradient-saffron);
+            z-index: 1001;
+            transition: width 0.3s ease;
+        }
+
+        /* Enhanced Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--ivory);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 8px solid var(--light-pink);
+            border-top: 8px solid var(--saffron);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Form validation styles */
+        .form-group.error input,
+        .form-group.error textarea {
+            border-color: #e74c3c;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .form-group.error .error-message {
+            display: block;
+        }
+
+        /* FIXED: Image loading and visibility */
+        img {
+            opacity: 1 !important;
+            display: block !important;
+            visibility: visible !important;
+        }
+
+        /* Ensure images are never hidden during scroll */
+        .menu-item img,
+        .about-image img,
+        .hero img {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+                <div class="logo-text">Chawla Sweets</div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content fade-in">
+            <h1>Chawla Sweets</h1>
+            <p class="hero-subtitle">Traditional Indian Sweets Since 1975</p>
+            <p class="decorative-text">मिठास का खजाना</p>
+            <p class="hero-description">Experience the authentic taste of traditional Indian sweets crafted with love, heritage recipes, and the finest ingredients from across India.</p>
+            <a href="#menu" class="btn bounce-in">Explore Our Mithai Collection</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Sweet Collection</h2>
+            <p class="decorative-text fade-in">हमारी मिठाइयों का स्वाद</p>
+            <p class="section-subtitle fade-in">Handcrafted traditional sweets made with pure ghee, premium dry fruits, and time-honored recipes passed down through generations</p>
+            
+            <!-- Menu Filters -->
+            <div class="menu-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All Sweets</button>
+                <button class="filter-btn" data-filter="milk-based">Milk Based</button>
+                <button class="filter-btn" data-filter="dry-fruits">Dry Fruits</button>
+                <button class="filter-btn" data-filter="special">Festival Special</button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu-grid">
+                <!-- Milk Based Sweets -->
+                <div class="menu-item fade-in" data-category="milk-based">
+                    <div class="special-badge">Best Seller</div>
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&h=400&fit=crop" alt="Kaju Katli">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Kaju Katli</h3>
+                        <p>Premium cashew fudge with silver leaf, made from pure cashews and sugar. A royal delicacy perfect for special occasions.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>850<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in" data-category="milk-based">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=500&h=400&fit=crop" alt="Gulab Jamun">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Gulab Jamun</h3>
+                        <p>Soft milk dumplings soaked in aromatic sugar syrup with cardamom and rose water. A timeless classic loved by all.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>320<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in" data-category="milk-based">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1559656914-a30970c1affd?w=500&h=400&fit=crop" alt="Rasgulla">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Rasgulla</h3>
+                        <p>Spongy cottage cheese balls in light sugar syrup. Fresh, soft, and absolutely delicious Bengali specialty.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>280<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dry Fruit Sweets -->
+                <div class="menu-item fade-in" data-category="dry-fruits">
+                    <div class="special-badge">Premium</div>
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=400&fit=crop" alt="Badam Burfi">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Badam Burfi</h3>
+                        <p>Rich almond fudge made with pure almonds, milk, and ghee. Garnished with pistachios and silver leaf.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>950<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in" data-category="dry-fruits">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=500&h=400&fit=crop" alt="Anjeer Rolls">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Anjeer Rolls</h3>
+                        <p>Premium fig rolls stuffed with mixed dry fruits and nuts. A healthy and delicious treat for all ages.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>1200<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in" data-category="dry-fruits">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=500&h=400&fit=crop" alt="Pista Burfi">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Pista Burfi</h3>
+                        <p>Exotic pistachio fudge with authentic green color and rich nutty flavor. Made with finest Kashmiri pistachios.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>1100<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Festival Specials -->
+                <div class="menu-item fade-in" data-category="special">
+                    <div class="special-badge">Festival Special</div>
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&h=400&fit=crop" alt="Motichoor Laddu">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Motichoor Laddu</h3>
+                        <p>Traditional sweet balls made with fine chickpea flour pearls, ghee, and cardamom. Perfect for festivals and celebrations.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>420<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item fade-in" data-category="special">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=500&h=400&fit=crop" alt="Soan Papdi">
+                    </div>
+                    <div class="menu-content">
+                        <h3>Soan Papdi</h3>
+                        <p>Flaky, layered sweet made with gram flour, ghee, and cardamom. Melts in your mouth with every bite.</p>
+                        <div class="menu-price">
+                            <span class="rupee-symbol">₹</span>380<span style="font-size: 1rem; color: var(--text-light);">/kg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Chawla Sweets</h2>
+            <p class="decorative-text fade-in">हमारी विरासत की कहानी</p>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>Our Sweet Heritage</h2>
+                    <p>Since 1975, Chawla Sweets has been synonymous with authentic Indian mithai. What began as a small sweet shop in the heart of Delhi has grown into a beloved brand trusted by generations of sweet lovers.</p>
+                    <p>Our master halwais (sweet makers) use traditional techniques passed down through generations, combined with the finest ingredients sourced directly from farms across India. Every sweet is crafted with pure desi ghee, premium dry fruits, and authentic flavors.</p>
+                    <p>From the royal Kaju Katli to the humble Gulab Jamun, each creation tells a story of our rich culinary heritage and unwavering commitment to quality.</p>
+                    <a href="#contact" class="btn btn-secondary">Visit Our Sweet Shop</a>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=500&fit=crop" alt="Chawla Sweets Heritage">
+                </div>
+            </div>
+            
+            <!-- Heritage Stats -->
+            <div class="heritage-stats fade-in">
+                <div class="stat-item">
+                    <span class="stat-number">49</span>
+                    <p class="stat-label">Years of Sweetness</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <p class="stat-label">Varieties of Sweets</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10K+</span>
+                    <p class="stat-label">Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <p class="stat-label">Pure & Natural</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">What Our Customers Say</h2>
+            <p class="decorative-text fade-in">ग्राहकों के प्यारे संदेश</p>
+            <div class="testimonials-slider fade-in">
+                <div class="testimonial active">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Chawla Sweets का कजू कतली बिल्कुल घर जैसा स्वाद देता है। 25 सालों से यहाँ से मिठाई ले रहे हैं और कभी निराश नहीं हुए। Quality हमेशा एक जैसी रहती है।"</p>
+                    <p class="testimonial-author">- Rajesh Sharma, Delhi</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Best sweets in the city! Their Gulab Jamuns are absolutely divine. The texture is perfect and the sweetness is just right. Chawla Sweets never disappoints during festivals."</p>
+                    <p class="testimonial-author">- Priya Mehta, Mumbai</p>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"मैंने कई जगह से मिठाई खाई है लेकिन Chawla Sweets का बादाम बर्फी सबसे अलग है। Pure ingredients और authentic taste - exactly what traditional sweets should be like!"</p>
+                    <p class="testimonial-author">- Suresh Kumar, Pune</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Ordered sweets for Diwali celebration and everyone loved them! The packaging was excellent and sweets reached fresh. Chawla Sweets made our festival even more special."</p>
+                    <p class="testimonial-author">- Anjali Singh, Bangalore</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-nav">
+                <span class="testimonial-dot active" data-slide="0"></span>
+                <span class="testimonial-dot" data-slide="1"></span>
+                <span class="testimonial-dot" data-slide="2"></span>
+                <span class="testimonial-dot" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Visit Our Sweet Shop</h2>
+            <p class="decorative-text fade-in">हमसे जुड़ें</p>
+            <p class="section-subtitle fade-in">Visit our store to experience the authentic taste of traditional Indian sweets or contact us for bulk orders and special occasions</p>
+            
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form fade-in">
+                    <h3>Send us a message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">आपका नाम / Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message">कृपया अपना नाम दर्ज करें</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">फ़ोन नंबर / Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <div class="error-message">कृपया अपना फ़ोन नंबर दर्ज करें</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">ईमेल / Email Address</label>
+                            <input type="email" id="email" name="email">
+                            <div class="error-message">कृपया सही ईमेल दर्ज करें</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">संदेश / Your Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <div class="error-message">कृपया अपना संदेश लिखें</div>
+                        </div>
+                        
+                        <button type="submit" class="btn">संदेश भेजें / Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info fade-in">
+                    <h3>हमारी दुकान पर आएं</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Shop No. 15, Sweet Market<br>Chandni Chowk, Delhi - 110006<br>भारत</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@chawlasweets.com</span>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>सोमवार-शनिवार: 9AM-9PM<br>रविवार: 10AM-8PM<br>त्योहारों में विशेष समय</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Home Delivery Available<br>घर तक डिलीवरी उपलब्ध</span>
+                    </div>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Google Map -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.174920656287!2d77.22855931508236!3d28.65606598240267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683634215%3A0x8d4d017121d1b978!2sChandni%20Chowk%2C%20New%20Delhi%2C%20Delhi%20110006!5e0!3m2!1sen!2sin!4v1635959592521!5m2!1sen!2sin"
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chawla Sweets</h3>
+                    <p>चावला मिठाई की दुकान - 1975 से परंपरागत भारतीय मिठाइयों का स्वाद। शुद्धता और गुणवत्ता हमारा वादा है।</p>
+                    <p>Crafting traditional Indian sweets with pure ingredients and authentic recipes since 1975.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home / मुख्य पृष्ठ</a>
+                    <a href="#menu">Menu / मेनू</a>
+                    <a href="#about">About Us / हमारे बारे में</a>
+                    <a href="#contact">Contact / संपर्क</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Specialities</h3>
+                    <a href="#">Kaju Katli / काजू कतली</a>
+                    <a href="#">Gulab Jamun / गुलाब जामुन</a>
+                    <a href="#">Badam Burfi / बादाम बर्फी</a>
+                    <a href="#">Festival Sweets / त्योहारी मिठाइयाँ</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <p>Shop No. 15, Sweet Market<br>Chandni Chowk, Delhi - 110006</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Email: info@chawlasweets.com</p>
+                    
+                    <!-- FIXED: Perfectly aligned social media icons -->
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chawla Sweets. सभी अधिकार सुरक्षित। Made with ❤️ in India | मिठास के साथ बनाया गया भारत में</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== ENHANCED JAVASCRIPT FUNCTIONALITY ==========
+
+        // DOM Elements
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+        const testimonials = document.querySelectorAll('.testimonial');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        const contactForm = document.getElementById('contactForm');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const progressBar = document.getElementById('progressBar');
+
+        // ========== LOADING ANIMATION ==========
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loadingOverlay.classList.add('hidden');
+            }, 1500);
+        });
+
+        // ========== PROGRESS BAR ==========
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + '%';
+        });
+
+        // ========== ENHANCED MOBILE MENU ==========
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // ========== SMOOTH SCROLLING WITH OFFSET ==========
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                navLinks.forEach(link => link.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                const targetId = e.target.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 90;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ========== ENHANCED MENU FILTERING ==========
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                menuItems.forEach((item, index) => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0) scale(1)';
+                        }, index * 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px) scale(0.95)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // ========== ENHANCED TESTIMONIAL SLIDER ==========
+        let currentTestimonial = 0;
+        let testimonialInterval;
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            testimonialDots[index].classList.add('active');
+        }
+
+        function startTestimonialSlider() {
+            testimonialInterval = setInterval(() => {
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+                showTestimonial(currentTestimonial);
+            }, 6000);
+        }
+
+        function stopTestimonialSlider() {
+            clearInterval(testimonialInterval);
+        }
+
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = index;
+                showTestimonial(currentTestimonial);
+                stopTestimonialSlider();
+                startTestimonialSlider();
+            });
+        });
+
+        startTestimonialSlider();
+
+        // ========== ENHANCED FORM VALIDATION ==========
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            let isValid = true;
+            const formGroups = contactForm.querySelectorAll('.form-group');
+            
+            formGroups.forEach(group => {
+                const input = group.querySelector('input, textarea');
+                const value = input.value.trim();
+                
+                group.classList.remove('error');
+                
+                if (input.type === 'email' && input.value) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        group.classList.add('error');
+                        isValid = false;
+                    }
+                } else if (input.type === 'tel') {
+                    const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                    if (!phoneRegex.test(value)) {
+                        group.classList.add('error');
+                        isValid = false;
+                    }
+                } else if (input.required && value === '') {
+                    group.classList.add('error');
+                    isValid = false;
+                }
+            });
+            
+            if (isValid) {
+                // Success animation
+                const submitBtn = contactForm.querySelector('button');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'भेज रहे हैं... / Sending...';
+                submitBtn.style.background = 'var(--gradient-saffron)';
+                
+                setTimeout(() => {
+                    alert('धन्यवाद! आपका संदेश भेज दिया गया है। हम जल्दी ही आपसे संपर्क करेंगे।\n\nThank you! Your message has been sent. We will contact you soon.');
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = 'var(--gradient-saffron)';
+                }, 1500);
+            }
+        });
+
+        // ========== SCROLL ANIMATIONS ==========
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.animationDelay = '0.2s';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ========== HEADER SCROLL EFFECTS - FIXED ==========
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            const scrollTop = window.pageYOffset;
+            
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(255, 248, 220, 0.98)';
+                header.style.backdropFilter = 'blur(25px)';
+                header.style.boxShadow = 'var(--shadow-heavy)';
+            } else {
+                header.style.background = 'rgba(255, 248, 220, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.boxShadow = 'var(--shadow-medium)';
+            }
+            
+            // Removed header hide/show effect that was causing issues
+        });
+
+        // ========== ACTIVE NAVIGATION ON SCROLL ==========
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const scrollPos = window.scrollY + 150;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // ========== ENHANCED MENU ITEM ANIMATIONS ==========
+        menuItems.forEach((item, index) => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.05)';
+                this.style.zIndex = '10';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.zIndex = '1';
+            });
+        });
+
+        // ========== KEYBOARD ACCESSIBILITY ==========
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (navMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        });
+
+        // ========== PRICE ANIMATION ON HOVER ==========
+        const priceElements = document.querySelectorAll('.menu-price');
+        priceElements.forEach(price => {
+            price.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.textShadow = '2px 2px 4px rgba(255, 153, 51, 0.3)';
+            });
+            
+            price.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.textShadow = 'none';
+            });
+        });
+
+        // ========== FLOATING SHAPES ANIMATION ==========
+        function createFloatingShapes() {
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach((shape, index) => {
+                shape.style.animationDelay = `${index * 2}s`;
+                shape.addEventListener('animationiteration', function() {
+                    this.style.left = Math.random() * 90 + '%';
+                    this.style.top = Math.random() * 90 + '%';
+                });
+            });
+        }
+
+        createFloatingShapes();
+
+        // ========== CONSOLE WELCOME MESSAGE ==========
+        console.log('🪔 नमस्ते! चावला मिठाई की वेबसाइट में आपका स्वागत है! 🍭');
+        console.log('🎉 Welcome to Chawla Sweets! Enjoy our traditional Indian sweets! 🥮');
+        console.log('Features: Mobile menu, smooth scrolling, filtering, testimonial slider, form validation, enhanced animations');
+
+        // ========== PERFORMANCE OPTIMIZATION ==========
+        
+        // Debounce function for scroll events
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Apply debounce to resize events
+        const debouncedResize = debounce(() => {
+            // Handle resize events
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }, 250);
+
+        window.addEventListener('resize', debouncedResize);
+
+        // ========== FIXED: ENSURE IMAGES REMAIN VISIBLE ==========
+        // Remove any image lazy loading that might hide images
+        document.addEventListener('DOMContentLoaded', function() {
+            const allImages = document.querySelectorAll('img');
+            allImages.forEach(img => {
+                img.style.opacity = '1';
+                img.style.visibility = 'visible';
+                img.style.display = 'block';
+                
+                // Ensure images load properly
+                if (!img.complete) {
+                    img.onload = function() {
+                        this.style.opacity = '1';
+                        this.style.visibility = 'visible';
+                    };
+                }
+            });
+        });
+
+        // Prevent any scroll-based image hiding
+        window.addEventListener('scroll', debounce(() => {
+            const allImages = document.querySelectorAll('img');
+            allImages.forEach(img => {
+                img.style.opacity = '1';
+                img.style.visibility = 'visible';
+                img.style.display = 'block';
+            });
+        }, 100));
+    </script>
+</body>
+</html>
